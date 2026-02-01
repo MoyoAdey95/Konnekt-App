@@ -3,6 +3,7 @@ import {
   insertProductSchema,
   insertCartSchema,
   cartItemSchema,
+  shippingAddressSchema,
 } from "@/lib/validators";
 
 // Includes all fields being inferred and adds more.
@@ -13,4 +14,5 @@ export type Product = z.infer<typeof insertProductSchema> & {
 };
 
 export type Cart = z.infer<typeof insertCartSchema>;
-export type cartItem = z.infer<typeof cartItemSchema>;
+export type CartItem = z.infer<typeof cartItemSchema>;
+export type ShippingAddress = z.infer<typeof shippingAddressSchema>;
